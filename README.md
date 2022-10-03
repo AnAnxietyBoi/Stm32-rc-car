@@ -59,3 +59,5 @@ Battery
 ### HOW IT WORKS:
 
 Uporabnik se dotakne zaslona na dotik na stm32f769i-disco plošči in tako določi v smer premika avtomobila. Ukaz se prenese preko oddajnika infrardečega signala (uporablja se SIRC SONY protokol) in sprejme ga sprejemnik na avtomobilu. Prejeto sporočilo se prenese do Arduino Nano, ga intepretira in pošlje ustrezni signal gonilnikoma motorjev, ki zaženeta povezan motor.
+
+![Car](c.jpg)
