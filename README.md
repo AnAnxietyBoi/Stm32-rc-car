@@ -1,11 +1,11 @@
-REMOTE CONTROLLED "CAR":
+# REMOTE CONTROLLED CAR
 
-PROJECT FOLDERS:
+### PROJECT FOLDERS:
 
  - car: code for arduino on the rc car
  - remote: code for stm32f7 board
 
-PARTS USED:
+### PARTS USED:
 
  - 2x 9V Battery
  
@@ -34,7 +34,7 @@ PARTS USED:
  	Datasheet - https://www.st.com/resource/en/datasheet/stm32f767bi.pdf
  	
 
-LIBRARIES USED:
+### LIBRARIES USED:
 
  - Official Arduino library
  - IRremote Arduino https://github.com/Arduino-IRremote/Arduino-IRremote
@@ -42,19 +42,20 @@ LIBRARIES USED:
  - HAL, BSP, FreeRTOS, CMSIS
 
 
-WIRING:
+### WIRING:
 
-Battery
-  |
-Motor ----- Motor Driver -----
-                             |
-                             ----- Arduino Nano ----- IR receiver (((((((( IR transmitter ----- stm32f769i-disco
-                             |          |
-Motor ----- Motor Driver -----          |
-  |                                 Power bank
-Battery
+<pre>
+Battery  
+  |  
+Motor ----- Motor Driver -----  
+                             |  
+                             ----- Arduino Nano ----- IR receiver (((((((( IR transmitter ----- stm32f769i-disco  
+                             |          |  
+Motor ----- Motor Driver -----          |  
+  |                                 Power bank  
+Battery  
+</pre>
 
-
-HOW IT WORKS:
+### HOW IT WORKS:
 
 Uporabnik se dotakne zaslona na dotik na stm32f769i-disco plošči in tako določi v smer premika avtomobila. Ukaz se prenese preko oddajnika infrardečega signala (uporablja se SIRC SONY protokol) in sprejme ga sprejemnik na avtomobilu. Prejeto sporočilo se prenese do Arduino Nano, ga intepretira in pošlje ustrezni signal gonilnikoma motorjev, ki zaženeta povezan motor.
